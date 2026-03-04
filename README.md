@@ -32,11 +32,11 @@ My current learning trajectory includes:
 
 ## 🚀 Selected Project
 
-### Vision-Based Robotic Manipulation Learning Pipeline
+### Imitation Learning for Robotic Arm Pick-and-Place Tasks
 
 Technologies: **Isaac Lab · PyTorch · LeRobot · π0.5 (VLA)**
 
-- Built a vision-based robotic manipulation environment in **Isaac Lab**
+- Built a vision-based robotic manipulation environment for a Franka Panda arm in **Isaac Lab**
 - Collected teleoperation demonstrations for imitation learning
 - Constructed **LeRobot datasets** for robot policy training
 - Fine-tuned a **Vision-Language-Action model (π0.5)** using **A100 GPUs**
