@@ -42,7 +42,7 @@ Technologies: **Isaac Lab · PyTorch · LeRobot · π0.5 (VLA)**
 - Fine-tuned a **Vision-Language-Action model (π0.5)** using **A100 GPUs**
 - Deployed the learned policy in simulation for autonomous manipulation
 
-(Project repository coming soon)
+[(Project repository](https://github.com/ChrisRuihanWang/Imitation-Learning-for-Robotic-Arm-Pick-and-Place-Tasks/blob/main/README.md)
 
 ---
 
