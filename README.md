@@ -28,7 +28,6 @@ My current learning trajectory includes:
 - **Robot kinematics** 
 - Simulation-based robotics development with **Isaac Sim / Isaac Lab**
 - **Vision-Language-Action (VLA) model training and deployment**
-- 
 ---
 
 ## 🚀 Selected Project
