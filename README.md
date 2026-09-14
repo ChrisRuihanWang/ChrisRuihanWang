@@ -70,19 +70,6 @@ A real-robot study of how an **Action Chunking Transformer (ACT)** policy genera
 - Analyzed retry behavior, distribution shift, and failure modes
 - Compared performance before and after expanding the demonstration distribution
 
-Key experimental result:
-
-```text
-Stage 2 discrete-grid evaluation:        39 / 45  (86.7%)
-Stage 3 continuous-pose evaluation:      15 / 45  (33.3%)
-Stage 3 stress test:                      1 / 5   (20.0%)
-100-demo model on original grid:         11 / 27  (40.7%)
-```
-
-The project highlighted an important practical observation:
-
-> Increasing demonstration diversity does not automatically improve policy generalization.
-
 [Project Repository](https://github.com/ChrisRuihanWang/so101-act-generalization)
 
 ---
@@ -173,29 +160,6 @@ The project is intended to explore:
 - CUDA
 
 ---
-
-## 🎯 Research Direction
-
-My longer-term goal is to pursue research in **robot learning and robotic control**, particularly in areas such as:
-
-- Learning-based manipulation
-- VLA-based robotic policies
-- Reinforcement-learning post-training
-- Safe and robust robot learning
-- Integration of model-based control and learned policies
-
-I am particularly interested in research problems that connect:
-
-```text
-Robotics & Control
-        +
-Imitation / Reinforcement Learning
-        +
-Vision-Language-Action Models
-```
-
----
-
 ## 📫 Contact
 
 **Email:** ruihanw@kth.se  
