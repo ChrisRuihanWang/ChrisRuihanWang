@@ -70,19 +70,6 @@ A real-robot study of how an **Action Chunking Transformer (ACT)** policy genera
 - Analyzed retry behavior, distribution shift, and failure modes
 - Compared policy performance before and after expanding the demonstration distribution
 
-Key experimental results:
-
-- **Stage 2 discrete-grid evaluation:** 39 / 45 (**86.7%**)
-- **Stage 2 seen positions:** 23 / 25 (**92.0%**)
-- **Stage 2 unseen positions:** 16 / 20 (**80.0%**)
-- **Stage 3 continuous-pose evaluation:** 15 / 45 (**33.3%**)
-- **Stage 3 stress test:** 1 / 5 (**20.0%**)
-- **100-demo model on original grid:** 11 / 27 (**40.7%**)
-
-One practical observation from the project was that:
-
-> Increasing demonstration diversity does not automatically improve policy generalization.
-
 🔗 **Repository:**  
 https://github.com/ChrisRuihanWang/soarm101-act-generalization
 
