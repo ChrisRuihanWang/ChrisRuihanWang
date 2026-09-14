@@ -87,7 +87,7 @@ A reusable simulation pipeline for robot control, keyboard teleoperation, and de
 - Designed the environment as a reusable foundation for imitation-learning experiments
 
 <!-- Replace with the final repository URL -->
-[Project Repository]([YOUR_ISAACSIM_REPOSITORY_URL](https://github.com/ChrisRuihanWang/isaacsim-teleop-data-pipeline))
+[Project Repository]([ChrisRuihanWang/isaacsim-teleop-data-pipeline))
 
 ---
 
