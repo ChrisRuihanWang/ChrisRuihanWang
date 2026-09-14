@@ -21,12 +21,12 @@ I enjoy working across the full robotics pipeline — from kinematics, control, 
 
 ## 📚 Current Learning Path
 
-My current study path connects classical robotics and control with modern robot learning:
+My current study path connects classical robotics and control with modern robot learning.
 
 ### Robotics & Control
 
 - Robot kinematics and rigid-body motion
-- Modern Robotics: SE(3), screw theory, Jacobians, inverse kinematics
+- SE(3), screw theory, Jacobians, and inverse kinematics
 - Model Predictive Control (MPC)
 - Optimal control and LQR
 - Reinforcement Learning fundamentals
@@ -35,7 +35,7 @@ My current study path connects classical robotics and control with modern robot 
 
 - Imitation Learning
 - Action Chunking Transformer (ACT)
-- Diffusion / Flow-Matching policies
+- Diffusion and Flow-Matching policies
 - Vision-Language-Action models
 - π0 / π0.5
 - Reinforcement-learning post-training for robotic policies
@@ -56,7 +56,7 @@ My current focus is transitioning from **behavior cloning and imitation learning
 
 ## 🚀 Selected Projects
 
-### 🤖 SO-101 ACT Generalization
+### 🤖 SO-ARM101 ACT Generalization
 
 A real-robot study of how an **Action Chunking Transformer (ACT)** policy generalizes under progressively expanded demonstration distributions.
 
@@ -68,46 +68,56 @@ A real-robot study of how an **Action Chunking Transformer (ACT)** policy genera
 - Trained ACT policies on fixed, discrete-grid, and continuous object distributions
 - Designed systematic real-robot rollout protocols for spatial generalization
 - Analyzed retry behavior, distribution shift, and failure modes
-- Compared performance before and after expanding the demonstration distribution
+- Compared policy performance before and after expanding the demonstration distribution
 
-[Project Repository](https://github.com/ChrisRuihanWang/so101-act-generalization)
+Key experimental results:
+
+- **Stage 2 discrete-grid evaluation:** 39 / 45 (**86.7%**)
+- **Stage 2 seen positions:** 23 / 25 (**92.0%**)
+- **Stage 2 unseen positions:** 16 / 20 (**80.0%**)
+- **Stage 3 continuous-pose evaluation:** 15 / 45 (**33.3%**)
+- **Stage 3 stress test:** 1 / 5 (**20.0%**)
+- **100-demo model on original grid:** 11 / 27 (**40.7%**)
+
+One practical observation from the project was that:
+
+> Increasing demonstration diversity does not automatically improve policy generalization.
+
+🔗 **Repository:**  
+https://github.com/ChrisRuihanWang/soarm101-act-generalization
 
 ---
 
 ### 🧪 Isaac Sim Teleoperation & Data Collection Pipeline
 
-A reusable simulation pipeline for robot control, keyboard teleoperation, and demonstration collection in **Isaac Sim / Isaac Lab**.
+A reusable simulation pipeline for robot manipulation, keyboard teleoperation, and demonstration collection in **Isaac Sim / Isaac Lab**.
 
 **Technologies:** Isaac Sim · Isaac Lab · Python · Franka Panda
 
 - Built a Franka Panda manipulation environment in Isaac Sim
 - Implemented robot control and keyboard teleoperation
 - Integrated RGB observations and robot joint states
-- Developed demonstration recording and dataset-generation workflows
-- Designed the environment as a reusable foundation for imitation-learning experiments
+- Developed synchronized demonstration recording and dataset-generation workflows
+- Structured the environment as a reusable foundation for imitation-learning and robot-learning experiments
 
-<!-- Replace with the final repository URL -->
-[Project Repository]([ChrisRuihanWang/isaacsim-teleop-data-pipeline))
+The repository focuses on the infrastructure required before policy learning:
+
+**Simulation → Teleoperation → Observation Collection → Demonstration Recording → Dataset Generation**
+
+🔗 **Repository:**  
+https://github.com/ChrisRuihanWang/isaacsim-teleop-data-pipeline
 
 ---
 
 ## 🔭 Current Work
 
-I am currently working on a second real-robot manipulation project based on **π0.5**.
+I am currently working toward a second real-robot manipulation project based on **π0.5**.
 
-The planned task involves **language-conditioned object selection and shape insertion**:
+The planned task focuses on **language-conditioned object selection and shape insertion**, where multiple objects with different colors and shapes are placed in the workspace and the robot must follow a language instruction to select the correct object and insert it into the corresponding slot.
 
-```text
-Language instruction
-        ↓
-Select the correct object
-        ↓
-Grasp
-        ↓
-Identify the corresponding slot
-        ↓
-Align and insert
-```
+The planned pipeline is:
+
+**Language Instruction → Object Selection → Grasping → Slot Matching → Alignment → Insertion**
 
 The project is intended to explore:
 
@@ -116,7 +126,8 @@ The project is intended to explore:
 - Continuous object-position variation
 - Precision insertion
 - Failure-driven data collection
-- Reinforcement-learning post-training with PPO / GRPO-style methods
+- Reinforcement-learning post-training
+- PPO / GRPO-style policy optimization for robotic manipulation
 
 ---
 
@@ -145,7 +156,7 @@ The project is intended to explore:
 - PyTorch
 - Transformers
 - Deep Learning
-- Policy Training & Evaluation
+- Policy Training and Evaluation
 
 ### Programming
 
@@ -160,6 +171,23 @@ The project is intended to explore:
 - CUDA
 
 ---
+
+## 🎯 Research Direction
+
+My longer-term goal is to pursue research in **robot learning and robotic control**, particularly in areas such as:
+
+- Learning-based manipulation
+- VLA-based robotic policies
+- Reinforcement-learning post-training
+- Safe and robust robot learning
+- Integration of model-based control and learned policies
+
+I am particularly interested in research problems that connect:
+
+**Robotics & Control + Imitation / Reinforcement Learning + Vision-Language-Action Models**
+
+---
+
 ## 📫 Contact
 
 **Email:** ruihanw@kth.se  
