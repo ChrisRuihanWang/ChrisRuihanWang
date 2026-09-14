@@ -1,10 +1,10 @@
 # Hi, I'm Ruihan Wang 👋
 
-MSc student in **Electric Power Engineering** at **KTH Royal Institute of Technology**.
+MSc student in **Electric Power Engineering** at **KTH Royal Institute of Technology**, with a growing research focus on **robot learning, robotic manipulation, and learning-based control**.
 
-My background is in **automation and control theory**, and my current focus is on **robot learning and robotic manipulation**, particularly the integration of **learning-based methods and control**.
+My background is in **control theory and automation**, and I am currently building toward research in **robot learning and Vision-Language-Action (VLA) models**, with particular interest in combining modern learning-based policies with structured robotic control.
 
-I am currently exploring **Vision-Language-Action (VLA) models** and their applications to robotic manipulation.
+I enjoy working across the full robotics pipeline — from kinematics, control, and simulation to real-robot data collection, policy training, deployment, and evaluation.
 
 ---
 
@@ -13,67 +13,190 @@ I am currently exploring **Vision-Language-Action (VLA) models** and their appli
 - Robot Learning
 - Robotic Manipulation
 - Vision-Language-Action Models
+- Reinforcement Learning for Robotics
+- Learning-Based Control
 - Embodied AI
 
 ---
 
-## 📚 Learning Path
+## 📚 Current Learning Path
 
-My academic path started from **classical and modern control theory**, and during my master's studies I began transitioning toward **learning-based control and robotics**.
+My current study path connects classical robotics and control with modern robot learning:
 
-My current learning trajectory includes:
+### Robotics & Control
 
-- Foundations of **deep learning**
-- Training neural networks with **PyTorch**
-- **Robot kinematics** 
-- Simulation-based robotics development with **Isaac Sim / Isaac Lab**
-- **Vision-Language-Action (VLA) model training and deployment**
+- Robot kinematics and rigid-body motion
+- Modern Robotics: SE(3), screw theory, Jacobians, inverse kinematics
+- Model Predictive Control (MPC)
+- Optimal control and LQR
+- Reinforcement Learning fundamentals
+
+### Robot Learning
+
+- Imitation Learning
+- Action Chunking Transformer (ACT)
+- Diffusion / Flow-Matching policies
+- Vision-Language-Action models
+- π0 / π0.5
+- Reinforcement-learning post-training for robotic policies
+
+### Learning & Implementation
+
+- PyTorch
+- Transformer architectures
+- Flow Matching
+- PPO / GAE / policy-gradient methods
+- LeRobot
+- Isaac Sim / Isaac Lab
+- ROS2
+
+My current focus is transitioning from **behavior cloning and imitation learning** toward **VLA fine-tuning and reinforcement-learning post-training**.
+
 ---
 
-## 🚀 Selected Project
+## 🚀 Selected Projects
 
-### Imitation Learning for Robotic Arm Pick-and-Place Tasks
+### 🤖 SO-101 ACT Generalization
 
-Technologies: **Isaac Lab · PyTorch · LeRobot · π0.5 (VLA)**
+A real-robot study of how an **Action Chunking Transformer (ACT)** policy generalizes under progressively expanded demonstration distributions.
 
-- Built a vision-based robotic manipulation environment for a Franka Panda arm in **Isaac Lab**
-- Collected teleoperation demonstrations for imitation learning
-- Constructed **LeRobot datasets** for robot policy training
-- Fine-tuned a **Vision-Language-Action model (π0.5)** using **A100 GPUs**
-- Deployed the learned policy in simulation for autonomous manipulation
+**Technologies:** LeRobot · PyTorch · SO-ARM101 · OpenCV · Ubuntu
 
-[Project Repository](https://github.com/ChrisRuihanWang/Imitation-Learning-for-Robotic-Arm-Pick-and-Place-Tasks)
+- Built a complete real-robot imitation-learning pipeline using **SO-ARM101**
+- Collected demonstrations through leader-follower teleoperation
+- Used dual-camera observations with top and side views
+- Trained ACT policies on fixed, discrete-grid, and continuous object distributions
+- Designed systematic real-robot rollout protocols for spatial generalization
+- Analyzed retry behavior, distribution shift, and failure modes
+- Compared performance before and after expanding the demonstration distribution
+
+Key experimental result:
+
+```text
+Stage 2 discrete-grid evaluation:        39 / 45  (86.7%)
+Stage 3 continuous-pose evaluation:      15 / 45  (33.3%)
+Stage 3 stress test:                      1 / 5   (20.0%)
+100-demo model on original grid:         11 / 27  (40.7%)
+```
+
+The project highlighted an important practical observation:
+
+> Increasing demonstration diversity does not automatically improve policy generalization.
+
+[Project Repository](https://github.com/ChrisRuihanWang/so101-act-generalization)
+
+---
+
+### 🧪 Isaac Sim Teleoperation & Data Collection Pipeline
+
+A reusable simulation pipeline for robot control, keyboard teleoperation, and demonstration collection in **Isaac Sim / Isaac Lab**.
+
+**Technologies:** Isaac Sim · Isaac Lab · Python · Franka Panda
+
+- Built a Franka Panda manipulation environment in Isaac Sim
+- Implemented robot control and keyboard teleoperation
+- Integrated RGB observations and robot joint states
+- Developed demonstration recording and dataset-generation workflows
+- Designed the environment as a reusable foundation for imitation-learning experiments
+
+<!-- Replace with the final repository URL -->
+[Project Repository](YOUR_ISAACSIM_REPOSITORY_URL)
+
+---
+
+## 🔭 Current Work
+
+I am currently working on a second real-robot manipulation project based on **π0.5**.
+
+The planned task involves **language-conditioned object selection and shape insertion**:
+
+```text
+Language instruction
+        ↓
+Select the correct object
+        ↓
+Grasp
+        ↓
+Identify the corresponding slot
+        ↓
+Align and insert
+```
+
+The project is intended to explore:
+
+- π0.5 fine-tuning on SO-ARM101
+- Multi-object and language-conditioned manipulation
+- Continuous object-position variation
+- Precision insertion
+- Failure-driven data collection
+- Reinforcement-learning post-training with PPO / GRPO-style methods
 
 ---
 
 ## 🛠 Tech Stack
 
-**Robotics**
+### Robotics
 
 - Isaac Sim / Isaac Lab
+- LeRobot
 - ROS2
+- SO-ARM101
+- Franka Panda
 - Robot Kinematics
-- Simulation-based robotics
+- Model Predictive Control
 
-**Machine Learning**
+### Robot Learning
+
+- Imitation Learning
+- Action Chunking Transformer
+- Vision-Language-Action Models
+- Flow Matching
+- Reinforcement Learning
+
+### Machine Learning
 
 - PyTorch
-- Deep Learning Model Training
-- Vision-Language-Action Models
+- Transformers
+- Deep Learning
+- Policy Training & Evaluation
 
-**Programming**
+### Programming
 
 - Python
-- Basic C
+- Basic C / C++
 
-**Systems**
+### Systems
 
 - Ubuntu 22.04
-- Linux development environment
+- Linux
+- Conda
+- CUDA
+
+---
+
+## 🎯 Research Direction
+
+My longer-term goal is to pursue research in **robot learning and robotic control**, particularly in areas such as:
+
+- Learning-based manipulation
+- VLA-based robotic policies
+- Reinforcement-learning post-training
+- Safe and robust robot learning
+- Integration of model-based control and learned policies
+
+I am particularly interested in research problems that connect:
+
+```text
+Robotics & Control
+        +
+Imitation / Reinforcement Learning
+        +
+Vision-Language-Action Models
+```
 
 ---
 
 ## 📫 Contact
 
-Email: *ruihanw@kth.se*  
-GitHub: https://github.com/ChrisRuihanWang
+**Email:** ruihanw@kth.se  
+**GitHub:** https://github.com/ChrisRuihanWang
